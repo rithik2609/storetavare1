@@ -1,0 +1,58 @@
+import { Review } from "@/types";
+
+export const reviews: Review[] = [
+  {
+    id: "1",
+    name: "Priya S.",
+    rating: 5,
+    text: "The quality is incredible and the saree is even more beautiful in person. Totally in love! The zari work is so intricate and the fabric is just divine.",
+    date: "2024-11-15",
+    verified: true,
+    productName: "Rose Gold Soft Silk Saree",
+  },
+  {
+    id: "2",
+    name: "Anitha R.",
+    rating: 5,
+    text: "Tavare has the most elegant collection. My go-to store for every occasion. The packaging was also beautiful and made it feel like a true luxury purchase.",
+    date: "2024-11-08",
+    verified: true,
+    productName: "Pista Green Banarasi Saree",
+  },
+  {
+    id: "3",
+    name: "Meena K.",
+    rating: 5,
+    text: "Excellent customer service and super fast delivery. Highly recommended! I ordered on a Thursday and received it by Saturday. The saree is gorgeous.",
+    date: "2024-10-30",
+    verified: true,
+    productName: "Dusty Pink Kanjivaram Saree",
+  },
+  {
+    id: "4",
+    name: "Lakshmi D.",
+    rating: 5,
+    text: "I wore this saree to my sister's wedding and received so many compliments. The colour was exactly as shown in the photos. Will definitely order again.",
+    date: "2024-10-22",
+    verified: true,
+    productName: "Deep Purple Kanjivaram",
+  },
+  {
+    id: "5",
+    name: "Sunita M.",
+    rating: 4,
+    text: "Beautiful saree with amazing craftsmanship. The cotton is so soft and breathable. Perfect for my office wear. Slightly delayed delivery but worth the wait.",
+    date: "2024-10-15",
+    verified: true,
+    productName: "Sky Blue Cotton Saree",
+  },
+  {
+    id: "6",
+    name: "Kavitha B.",
+    rating: 5,
+    text: "I have ordered from many places but Tavare is truly special. The attention to detail in every saree is remarkable. This is now my favourite brand.",
+    date: "2024-09-28",
+    verified: true,
+    productName: "Maroon Banarasi Silk Saree",
+  },
+];
