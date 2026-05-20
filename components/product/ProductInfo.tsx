@@ -56,7 +56,7 @@ export default function ProductInfo({ product }: { product: Product }) {
       <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "1.5rem" }}>{product.description}</p>
 
       {/* Attributes Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "1.75rem", padding: "1rem", background: "var(--cream)", borderRadius: 4 }}>
+      <div className="two-col-sm" style={{ marginBottom: "1.75rem", padding: "1rem", background: "var(--cream)", borderRadius: 4 }}>
         {attributes.map((attr) => (
           <div key={attr.label} style={{ display: "flex", gap: "0.5rem", fontSize: "0.82rem" }}>
             <span>{attr.icon}</span>
@@ -98,16 +98,16 @@ export default function ProductInfo({ product }: { product: Product }) {
       </div>
 
       {/* Trust Badges */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "0.75rem", padding: "1rem", border: "1px solid var(--border)", borderRadius: 4 }}>
+      <div style={{ display: "flex", gap: "0.5rem", padding: "1rem", border: "1px solid var(--border)", borderRadius: 4, justifyContent: "space-around" }}>
         {[
           { icon: <Truck size={16} />, label: "Free Shipping", sub: "Above ₹1499" },
           { icon: <ShieldCheck size={16} />, label: "Secure Payment", sub: "100% Safe" },
           { icon: <RotateCcw size={16} />, label: "Easy Returns", sub: "Within 7 days" },
         ].map((b) => (
-          <div key={b.label} style={{ textAlign: "center" }}>
+          <div key={b.label} style={{ textAlign: "center", flex: 1 }}>
             <div style={{ color: "var(--primary)", display: "flex", justifyContent: "center", marginBottom: 4 }}>{b.icon}</div>
-            <div style={{ fontFamily: "'Jost',sans-serif", fontSize: "0.72rem", fontWeight: 600 }}>{b.label}</div>
-            <div style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{b.sub}</div>
+            <div style={{ fontFamily: "'Jost',sans-serif", fontSize: "0.68rem", fontWeight: 600, lineHeight: 1.3 }}>{b.label}</div>
+            <div style={{ fontSize: "0.62rem", color: "var(--text-muted)" }}>{b.sub}</div>
           </div>
         ))}
       </div>

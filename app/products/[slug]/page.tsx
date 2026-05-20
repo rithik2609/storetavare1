@@ -41,7 +41,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
       <section className="section" style={{ paddingTop: "1.5rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3.5rem", alignItems: "start" }}>
+          <div className="hero-grid" style={{ alignItems: "start" }}>
             <ProductGallery images={product.images} name={product.name} />
             <ProductInfo product={product} />
           </div>
@@ -51,14 +51,14 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Description Tabs */}
       <section style={{ borderTop: "1px solid var(--border)", padding: "2.5rem 0" }}>
         <div className="container">
-          <div style={{ display: "flex", gap: 0, borderBottom: "2px solid var(--border)", marginBottom: "1.75rem" }}>
+          <div style={{ display: "flex", gap: 0, borderBottom: "2px solid var(--border)", marginBottom: "1.75rem", overflowX: "auto" }}>
             {["Description","Details","Wash Care","Shipping & Returns"].map((tab, i) => (
-              <button key={tab} style={{ padding: "0.75rem 1.25rem", fontFamily: "'Jost',sans-serif", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", background: "none", border: "none", cursor: "pointer", color: i === 0 ? "var(--primary)" : "var(--text-muted)", borderBottom: i === 0 ? "2px solid var(--primary)" : "2px solid transparent", marginBottom: -2 }}>
+              <button key={tab} style={{ padding: "0.75rem 1rem", fontFamily: "'Jost',sans-serif", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", background: "none", border: "none", cursor: "pointer", color: i === 0 ? "var(--primary)" : "var(--text-muted)", borderBottom: i === 0 ? "2px solid var(--primary)" : "2px solid transparent", marginBottom: -2, whiteSpace: "nowrap", flexShrink: 0 }}>
                 {tab}
               </button>
             ))}
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem" }}>
+          <div className="two-col">
             <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", lineHeight: 1.9 }}>{product.description}</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {["Premium Quality Silk","Intricate Zari Weaving","Lightweight & Comfortable","Perfect for All Occasions"].map((f) => (
